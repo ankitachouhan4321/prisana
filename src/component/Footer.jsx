@@ -194,7 +194,11 @@ const Footer = () => {
                                 </div>
 
                                 <div>
-                                    New Delhi, India
+                                    <b>REXE INDUSTRIES </b>
+                                    <br/>
+                                    Plot No. 306, Sector 53,
+                                    Kundli Industrial Area,
+                                    Sonipat – 131028, Haryana, India.
                                 </div>
 
                             </div>

@@ -14,6 +14,8 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const [productsOpen, setProductsOpen] = useState(false);
+
   return (
     <>
       {/* Top Header */}
@@ -66,7 +68,7 @@ export default function Navbar() {
 
       <nav className={`navbar navbar-expand-lg main-navbar ${sticky ? "sticky-nav" : ""}`}>
 
-        <div className="container">
+        <div className="container-lg">
 
           {/* Logo */}
 
@@ -94,6 +96,7 @@ export default function Navbar() {
             id="mainMenu"
           >
 
+
             <ul className="navbar-nav ms-auto">
 
               <li className="nav-item">
@@ -108,18 +111,82 @@ export default function Navbar() {
                 </Link>
               </li>
 
-              <li className="nav-item">
-                <Link className="nav-link" to="/products">
-                  Products
-                </Link>
+              {/* Products Dropdown */}
+
+
+              {/* Products Dropdown */}
+              <li
+                className={`nav-item dropdown prisana-dropdown ${productsOpen ? "is-open" : ""
+                  }`}
+                onMouseEnter={() => {
+                  if (window.innerWidth >= 992) {
+                    setProductsOpen(true);
+                  }
+                }}
+                onMouseLeave={() => {
+                  if (window.innerWidth >= 992) {
+                    setProductsOpen(false);
+                  }
+                }}
+              >
+                <div className="prisana-dropdown-header">
+
+                  <Link
+                    className="nav-link"
+                    to="/products"
+                    onClick={() => setProductsOpen(false)}
+                  >
+                    Products
+                  </Link>
+
+                  <button
+                    className="prisana-dropdown-toggle"
+                    type="button"
+                    onClick={() => setProductsOpen((prev) => !prev)}
+                    aria-expanded={productsOpen}
+                    aria-controls="prisana-products-menu"
+                    aria-label="Toggle products menu"
+                  >
+                    <i className="fa-solid fa-chevron-down"></i>
+                  </button>
+
+                </div>
+
+                <ul
+                  id="prisana-products-menu"
+                  className={`dropdown-menu prisana-dropdown-menu ${productsOpen ? "show" : ""
+                    }`}
+                >
+                  {[
+                    ["Wind Screenwash Fluid", "wind-screenwash-fluid"],
+                    ["Anti-Freeze Coolant", "anti-freeze-coolant"],
+                    ["Dashboard Polish", "dashboard-polish"],
+                    ["Tyre Polish", "tyre-polish"],
+                    ["Car Shampoo", "car-shampoo"],
+                    ["Dry Wash Shampoo", "dry-wash-shampoo"],
+                    ["Battery Water (D.M. Water)", "battery-water"],
+                    ["Chrome Shiner", "chrome-shiner"],
+                  ].map(([name, slug]) => (
+                    <li key={slug}>
+                      <Link
+                        className="dropdown-item"
+                        to={`/products/${slug}`}
+                        onClick={() => setProductsOpen(false)}
+                      >
+                        {name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </li>
+
+
 
               <li className="nav-item">
                 <Link className="nav-link" to="/gallery">
                   Gallery
                 </Link>
               </li>
-
 
               <li className="nav-item">
                 <Link className="nav-link" to="/contact">
@@ -128,6 +195,7 @@ export default function Navbar() {
               </li>
 
             </ul>
+
 
             {/* Right Side */}
 

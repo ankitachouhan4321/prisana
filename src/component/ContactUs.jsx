@@ -151,7 +151,8 @@ const ContactUs = () => {
                                 <div className="contact-address">
                                     <i className="fa-solid fa-location-dot"></i>
                                     <p>
-                                        New Delhi, India
+                                        <strong>  REXE INDUSTRIES </strong> <br/>
+                                        Plot No. 306, Sector 53, Kundli Industrial Area, Sonipat – 131028, Haryana, India.
                                     </p>
                                 </div>
 

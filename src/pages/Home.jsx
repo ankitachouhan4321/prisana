@@ -2,6 +2,8 @@ import React from 'react'
 import ReactCompareImage from "react-compare-image";
 import { useState, useRef } from "react";
 
+import Brand from '../component/Brand';
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
@@ -977,11 +979,11 @@ const Home = () => {
                 vehicle care and maintenance.
               </p>
 
-              <img
+              {/* <img
                 src="/img/faq-product.png"
                 className="img-fluid faq-image"
                 alt="Prisana Automotive Care Products"
-              />
+              /> */}
 
             </div>
 
@@ -1395,6 +1397,12 @@ const Home = () => {
       </section>
 
       {/* blog-sec end */}
+
+
+      {/* brand start */}
+      <Brand />
+      {/* brand end */}
+
 
       {/* feature-strip start */}
       <section className="feature-strip py-4">
