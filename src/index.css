@@ -1377,7 +1377,7 @@ a {
 .how-use-section {
   position: relative;
   padding: 200px 0 30px;
-  background: url("img/how.jpg") center center;
+  background: url("/img/how.jpg") center center;
   background-size: cover;
   overflow: hidden;
   margin: 0 5px;
