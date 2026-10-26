@@ -28,6 +28,7 @@ const ContactUs = () => {
         }));
     };
 
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -60,12 +61,15 @@ const ContactUs = () => {
 
             const result = await response.json();
 
+            console.log("FormSubmit Response:", result);
+
             if (
                 !response.ok ||
-                (result.success !== true &&
-                    result.success !== "true")
+                (result.success !== true && result.success !== "true")
             ) {
-                throw new Error("Submission failed");
+                throw new Error(
+                    result.message || "Form submission failed."
+                );
             }
 
             setStatus({
@@ -81,15 +85,23 @@ const ContactUs = () => {
                 message: "",
                 website: "",
             });
+
         } catch (error) {
+            console.error("Prisana Form Error:", error);
+
             setStatus({
                 type: "danger",
-                message: "Unable to send your message. Please try again.",
+                message:
+                    error instanceof TypeError
+                        ? "Network error. Please check your connection and try again."
+                        : error.message || "Unable to send your message.",
             });
+
         } finally {
             setLoading(false);
         }
     };
+
 
     return (
         <section className="prisana-contact-section py-5">
