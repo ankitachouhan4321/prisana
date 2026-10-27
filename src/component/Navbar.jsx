@@ -68,7 +68,7 @@ export default function Navbar() {
 
       <nav className={`navbar navbar-expand-lg main-navbar ${sticky ? "sticky-nav" : ""}`}>
 
-        <div className="container-lg">
+        <div className="container">
 
           {/* Logo */}
 
@@ -152,20 +152,20 @@ export default function Navbar() {
 
                 </div>
 
+
                 <ul
                   id="prisana-products-menu"
                   className={`dropdown-menu prisana-dropdown-menu ${productsOpen ? "show" : ""
                     }`}
                 >
                   {[
-                    ["Wind Screenwash Fluid", "wind-screenwash-fluid"],
-                    ["Anti-Freeze Coolant", "anti-freeze-coolant"],
-                    ["Dashboard Polish", "dashboard-polish"],
-                    ["Tyre Polish", "tyre-polish"],
-                    ["Car Shampoo", "car-shampoo"],
-                    ["Dry Wash Shampoo", "dry-wash-shampoo"],
-                    ["Battery Water (D.M. Water)", "battery-water"],
-                    ["Chrome Shiner", "chrome-shiner"],
+                    ["Windscreen Wash Fluid ", "windscreen-wash-fluid"],
+                    ["Car Shampoo ", "car-shampoo"],
+                    ["Dashboard Polish ", "dashboard-polish"],
+                    ["Dry Wash Shampoo ", "dry-wash-shampoo"],
+                    ["De-Mineralise Water ", "de-mineralise-water"],
+                    ["Tyre Shiner ", "tyre-shiner"],
+                    ["Coolant ", "coolant"],
                   ].map(([name, slug]) => (
                     <li key={slug}>
                       <Link
@@ -178,6 +178,7 @@ export default function Navbar() {
                     </li>
                   ))}
                 </ul>
+
               </li>
 
 

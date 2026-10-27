@@ -112,39 +112,45 @@ const Footer = () => {
                             <ul className="footer-linksJah">
 
                                 <li>
-                                    <a href="/">
-                                        Screen Wash Concentrate
-                                    </a>
+                                    <Link to="/products/windscreen-wash-fluid">
+                                        Windscreen Wash Fluid
+                                    </Link>
                                 </li>
 
                                 <li>
-                                    <a href="/">
-                                        Crystal Clear Visibility
-                                    </a>
+                                    <Link to="/products/car-shampoo">
+                                        Car Shampoo
+                                    </Link>
                                 </li>
 
                                 <li>
-                                    <a href="/">
-                                        Removes Dust & Road Grime
-                                    </a>
+                                    <Link to="/products/dashboard-polish">
+                                        Dashboard Polish
+                                    </Link>
                                 </li>
 
                                 <li>
-                                    <a href="/">
-                                        Streak-Free Cleaning
-                                    </a>
+                                    <Link to="/products/dry-wash-shampoo">
+                                        Dry Wash Shampoo
+                                    </Link>
                                 </li>
 
                                 <li>
-                                    <a href="/">
-                                        Safe for All Windshields
-                                    </a>
+                                    <Link to="/products/de-mineralise-water">
+                                        De-Mineralise Water
+                                    </Link>
                                 </li>
 
                                 <li>
-                                    <a href="/">
-                                        Easy Mix Formula
-                                    </a>
+                                    <Link to="/products/tyre-shiner">
+                                        Tyre Shiner
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link to="/products/coolant">
+                                        Coolant
+                                    </Link>
                                 </li>
 
                             </ul>

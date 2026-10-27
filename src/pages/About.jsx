@@ -147,17 +147,8 @@ const About = () => {
                   {/* Managing Director */}
                   <div className="row align-items-center g-4 mb-5">
 
-                      <div className="col-md-4">
-                          <div className="leader-image">
-                              <img
-                                  src="/img/vinod-bhagat.jpg"
-                                  alt="Mr. Vinod Bhagat - Managing Director"
-                                  className="img-fluid"
-                              />
-                          </div>
-                      </div>
 
-                      <div className="col-md-8">
+                      <div className="col-md-10 m-auto">
                           <div className="leader-content left">
 
                               {/* <span className="leader-label">
@@ -196,7 +187,7 @@ const About = () => {
                   {/* Director */}
                   <div className="row align-items-center g-4">
 
-                      <div className="col-md-8 order-2 order-lg-1">
+                      <div className="col-md-10 m-auto">
                           <div className="leader-content right">
 
                               {/* <span className="leader-label">
@@ -231,21 +222,13 @@ const About = () => {
                           </div>
                       </div>
 
-                      <div className="col-md-4 order-1 order-lg-2">
-                          <div className="leader-image">
-                              <img
-                                  src="/img/rahul-bhagat.jpg"
-                                  alt="Mr. Rahul Bhagat - Director"
-                                  className="img-fluid"
-                              />
-                          </div>
-                      </div>
 
                   </div>
 
               </div>
-          </section>
+          </section >
           {/* Prisana Leadership Section End */}
+
 
           {/* vision start */}
 

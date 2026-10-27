@@ -581,7 +581,6 @@ a {
   transition: all 0.4s ease;
 }
 
-
 /* PRISANA PRODUCTS DROPDOWN */
 
 .prisana-dropdown {
@@ -652,7 +651,6 @@ a {
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 991px) {
-
   .prisana-dropdown {
     display: block;
     width: 100%;
@@ -718,8 +716,6 @@ a {
     padding-left: 25px;
   }
 }
-
-
 
 /*==================================
         RESPONSIVE
@@ -1489,7 +1485,7 @@ a {
   position: absolute;
   right: -40px;
   top: 50px;
-  color: var(--orange);
+  color: white;
   font-size: 25px;
 }
 
@@ -1902,7 +1898,6 @@ a {
   color: var(--primary-light) !important;
   background-color: transparent;
 }
-
 
 /* Newsletter */
 .footer-newsTextJah {
@@ -2377,12 +2372,14 @@ a {
   padding: 35px;
   height: 100%;
   transition: all 0.4s ease;
+    box-shadow: 0 12px 30px rgb(0 48 102);
+
 }
 
 .fonder .leader-content:hover {
   /* background: #ffffff; */
   border-color: #ffffff;
-  box-shadow: 0 12px 30px rgb(0 48 102);
+  box-shadow: 0 12px 30px rgb(0, 0, 0);
 }
 
 /* Experience Label */
@@ -3724,9 +3721,7 @@ a {
   }
 }
 
-
 /* breadcrumb end */
-
 
 /* Contact Section */
 .prisana-contact-section {
@@ -3823,9 +3818,6 @@ a {
   min-height: 170px;
   resize: vertical;
 }
-
-
-
 
 /* Responsive */
 @media (max-width: 991px) {
@@ -3951,13 +3943,11 @@ a {
   }
 }
 
-@media (max-width:575px) {
-        .prisana-vmv-card {
-        padding: 15px 12px;
-    }
-    
+@media (max-width: 575px) {
+  .prisana-vmv-card {
+    padding: 15px 12px;
+  }
 }
-
 
 /* vision end */
 
@@ -3986,8 +3976,7 @@ a {
   align-items: center;
   box-shadow: 0 4px 15px rgba(0, 35, 65, 0.06);
   transition: all 0.3s ease;
-    border: 1px solid transparent;
-
+  border: 1px solid transparent;
 }
 
 /* Logos */
@@ -4032,3 +4021,548 @@ a {
 }
 
 /* brand end */
+
+/* =====================================
+   PRISANA PRODUCT INFORMATION PAGE
+===================================== */
+
+/* ====================================
+   PRISANA COMPACT PRODUCT PAGE
+==================================== */
+
+.prisana-product-page {
+  padding: 50px 0 70px;
+  background: #fff;
+}
+
+.prisana-product-page * {
+  box-sizing: border-box;
+}
+
+.prisana-product-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Two Column Layout */
+
+.prisana-product-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 45%) minmax(0, 55%);
+  gap: 45px;
+  align-items: start;
+}
+
+/* ====================================
+   LEFT SIDE - STICKY IMAGE
+==================================== */
+
+.prisana-product-gallery {
+  position: sticky;
+  top: 105px;
+  align-self: start;
+  min-width: 0;
+}
+
+.prisana-product-gallery-inner {
+  width: 100%;
+}
+
+.prisana-product-main-image {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  background: #f5f8fc;
+  border: 1px solid #e8edf4;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prisana-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.prisana-product-main-image:hover .prisana-product-image {
+  transform: scale(1.025);
+}
+
+.prisana-product-zoom-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: #fff;
+  color: #004799;
+  border: 1px solid #e4ebf3;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Thumbnails */
+
+.prisana-product-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 13px;
+}
+
+.prisana-product-thumbnail {
+  width: 72px;
+  height: 75px;
+  padding: 7px;
+  background: #f8fafc;
+  border: 1px solid #e3e9f0;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.prisana-product-thumbnail.active {
+  border: 2px solid #004799;
+}
+
+.prisana-product-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ====================================
+   RIGHT SIDE - PRODUCT CONTENT
+==================================== */
+
+.prisana-product-info {
+  padding-top: 5px;
+  min-width: 0;
+}
+
+.prisana-product-info .sub-title {
+  /* display: block; */
+  color: #ff3038;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  position: relative;
+}
+.prisana-product-info .sub-title::after{
+  background-color: var(--orange);
+  }
+
+.prisana-product-info .heading-main {
+  color: #062a49;
+  font-size: clamp(26px, 3vw, 35px);
+  font-weight: 750;
+  line-height: 1.25;
+  margin: 0 0 14px;
+}
+
+.prisana-product-title-underline {
+  width: 48px;
+  height: 3px;
+  background: #ff3038;
+  margin-bottom: 18px;
+}
+
+.prisana-product-subtitle {
+  color: #004799;
+  font-size: 15px;
+  font-weight: 650;
+  margin: 0 0 14px;
+  line-height: 1.5;
+}
+
+.prisana-product-description {
+  color: #566477;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0 0 23px;
+}
+
+/* Features */
+
+.prisana-product-feature-section {
+  padding-top: 18px;
+  border-top: 1px solid #e8edf3;
+}
+
+.prisana-product-feature-section h2 {
+  font-size: 17px;
+  color: #062a49;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+.prisana-product-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.prisana-product-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  font-size: 13.5px;
+  color: #48586b;
+  line-height: 1.6;
+}
+
+.prisana-product-feature-list li svg {
+  color: #ff3038;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Compact Product Specifications */
+
+.prisana-product-mini-details {
+  margin-top: 25px;
+  padding: 15px 18px;
+  background: #f5f8fc;
+  border: 1px solid #e7edf5;
+  border-radius: 8px;
+}
+
+.prisana-product-mini-details > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 0;
+  font-size: 13px;
+}
+
+.prisana-product-mini-details > div:not(:last-child) {
+  border-bottom: 1px solid #e4eaf1;
+}
+
+.prisana-product-mini-details span {
+  color: #64748b;
+}
+
+.prisana-product-mini-details strong {
+  font-weight: 600;
+  color: #243b55;
+  text-align: right;
+}
+
+/* Enquiry */
+
+.prisana-product-cta {
+  margin-top: 25px;
+}
+/* Supply Info */
+
+.prisana-product-supply-note {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  margin-top: 23px;
+  padding: 13px 15px;
+  background: #effaf3;
+  border-left: 3px solid #008b51;
+  border-radius: 5px;
+}
+
+.prisana-product-supply-note svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #008b51;
+}
+
+.prisana-product-supply-note p {
+  font-size: 12.5px;
+  line-height: 1.65;
+  margin: 0;
+  color: #315e45;
+}
+
+/* ====================================
+   IMAGE ZOOM MODAL
+==================================== */
+
+.prisana-product-zoom-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(5, 20, 38, 0.85);
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prisana-product-zoom-content {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prisana-product-zoom-content img {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+}
+
+.prisana-product-zoom-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: #f1f5f9;
+  color: #142235;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ====================================
+   RESPONSIVE
+==================================== */
+
+@media (max-width: 991px) {
+  .prisana-product-layout {
+    gap: 25px;
+    grid-template-columns: minmax(0, 43%) minmax(0, 57%);
+  }
+
+  .prisana-product-main-image {
+    height: 360px;
+    padding: 20px;
+  }
+
+  .prisana-product-gallery {
+    top: 85px;
+  }
+}
+
+@media (max-width: 767px) {
+  .prisana-product-page {
+    padding: 30px 0 45px;
+  }
+
+  .prisana-product-container {
+    width: 92%;
+  }
+
+  .prisana-product-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .prisana-product-gallery {
+    position: static;
+  }
+
+  .prisana-product-main-image {
+    height: 350px;
+    padding: 25px;
+  }
+
+  .prisana-product-info .heading-main {
+    font-size: 28px;
+  }
+
+  .prisana-product-cta {
+    margin-top: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prisana-product-main-image {
+    height: 300px;
+  }
+
+  .prisana-product-thumbnail {
+    width: 65px;
+    height: 68px;
+  }
+
+  .prisana-product-description {
+    font-size: 13px;
+  }
+
+  .prisana-product-enquiry-btn {
+    width: 100%;
+  }
+}
+
+/* LEFT SIDE STICKY PRODUCT IMAGE */
+
+.prisana-product-layout {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    gap: 40px;
+    align-items: start;
+}
+
+.prisana-product-gallery {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+    height: fit-content;
+    z-index: 2;
+}
+
+/* RIGHT SIDE SCROLLS NORMALLY */
+.prisana-product-info {
+    position: relative;
+    min-width: 0;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 767px) {
+    .prisana-product-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .prisana-product-gallery {
+        position: static;
+        height: auto;
+    }
+}
+
+
+/* CAR SHAMPOO PRODUCT HIGHLIGHTS */
+
+.prisana-shampoo-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.prisana-shampoo-highlight-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 12px;
+    background: #f8fbfe;
+    border: 1px solid #dae5ef;
+    border-radius: 12px;
+    min-width: 0;
+}
+
+.prisana-shampoo-highlight-card .highlight-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.prisana-shampoo-highlight-card .highlight-label.red {
+    color: #ff3038;
+}
+
+.prisana-shampoo-highlight-card .highlight-label.green {
+    color: #008a45;
+}
+
+.prisana-shampoo-highlight-card .highlight-label.blue {
+    color: #004799;
+}
+
+.prisana-shampoo-highlight-card strong {
+    font-size: 13px;
+    color: #152335;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* PRODUCT IMAGE CAPTION */
+
+.prisana-product-image-caption {
+    margin-top: 12px;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 480px) {
+    .prisana-shampoo-highlights {
+        gap: 8px;
+    }
+
+    .prisana-shampoo-highlight-card {
+        padding: 12px 9px;
+    }
+
+    .prisana-shampoo-highlight-card strong {
+        font-size: 11px;
+    }
+
+    .prisana-shampoo-highlight-card .highlight-label {
+        font-size: 9px;
+    }
+}
+
+/* DASHBOARD POLISH HIGHLIGHT */
+
+.prisana-dashboard-highlight {
+    margin-top: 25px;
+    padding: 18px 22px;
+    background: #008fc9;
+    border-radius: 12px;
+    color: #ffffff;
+}
+
+.prisana-dashboard-highlight h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #ffffff;
+    margin: 0 0 5px;
+}
+
+.prisana-dashboard-highlight p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 480px) {
+    .prisana-dashboard-highlight {
+        padding: 16px 18px;
+    }
+
+    .prisana-dashboard-highlight h3 {
+        font-size: 16px;
+    }
+}
+
+
+/* product-det end */
+

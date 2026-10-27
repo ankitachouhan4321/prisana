@@ -17,6 +17,21 @@ import Products from './pages/Products';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 
+import WindscreenWashProduct from './products/WindscreenWashProduct'
+import CarShampooProduct from './products/CarShampooProduct'
+import DashboardPolishProduct from './products/DashboardPolishProduct'
+import DryWashShampooProduct from './products/DryWashShampooProduct'
+import DeMineraliseWaterProduct from './products/DeMineraliseWaterProduct'
+import TyreShinerProduct from './products/TyreShinerProduct'
+import CoolantProduct from './products/CoolantProduct'
+
+import ScrollToTop from "./component/ScrollToTop";
+
+
+
+
+
+
 
 const App = () => {
   
@@ -24,21 +39,34 @@ const App = () => {
    <>
       <BrowserRouter>
      
+
+        {/* AUTO SCROLL TO TOP ON ROUTE CHANGE */}
+        <ScrollToTop />
+
       <Navbar />
 
+    
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
+          <Route path="/shirt/girls" element={<Products />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />      
+          <Route path="/products/windscreen-wash-fluid" element={<WindscreenWashProduct />} />
+          <Route path="/products/car-shampoo" element={<CarShampooProduct />} />
+          <Route path="/products/dashboard-polish" element={<DashboardPolishProduct />} />
+          <Route path="/products/dry-wash-shampoo" element={<DryWashShampooProduct />} />
+          <Route path="/products/de-mineralise-water" element={<DeMineraliseWaterProduct />} />
+          <Route path="/products/tyre-shiner" element={<TyreShinerProduct />} />
+          <Route path="/products/coolant" element={<CoolantProduct />} />
+          <Route path="/products" element={<Products/>}/>
+
 
         </Routes>
 
       <Footer/>
         
       </BrowserRouter>
-
     </>
   )
 }

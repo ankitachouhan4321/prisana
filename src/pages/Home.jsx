@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactCompareImage from "react-compare-image";
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
+
 
 import Brand from '../component/Brand';
 
@@ -16,54 +18,82 @@ import blog2 from "/img/blog/2.png";
 import blog3 from "/img/blog/3.jpg";
 
 
-
 import FacilityGallery from '../component/FacilityGallery';
 
 
 const products = [
   {
     id: 1,
-    name: "Wind Screenwash Fluid",
+    name: "Windscreen Wash Fluid",
     image: "/img/prod/1.png",
-    image2: "/img/prod/2.png",
+    image2: "/img/prod/1.png",
     category: "Glass Care",
     description:
-      "A concentrated windshield cleaning formula that removes dust, pollution film, and dirt for crystal-clear, streak-free visibility.",
-    slug: "wind-screenwash-fluid",
+      "A high-performance concentrated windscreen cleaner that removes dirt, dust, and pollution film for crystal-clear, streak-free visibility.",
+    slug: "/windscreen-wash-fluid",
   },
   {
     id: 2,
-    name: "Anti-Freeze Coolant",
-    image: "/img/products/anti-freeze-coolant.png",
-    image2: "/img/products/wind-screenwash.png",
-
+    name: "Car Shampoo",
+    image: "/img/prod/2.png",
+    image2: "/img/prod/2.png",
+    category: "Exterior Care",
     description:
-      "Help protect your engine with dependable cooling performance in changing temperatures.",
-    slug: "anti-freeze-coolant",
+      "An effective, non-streaking car shampoo that removes oil, grease, and stubborn dirt while being gentle on car paint and leaving a sparkling finish.",
+    slug: "/car-shampoo",
   },
   {
     id: 3,
     name: "Dashboard Polish",
-    image: "/img/products/dashboard-polish.png",
-    image2: "/img/products/wind-screenwash.png",
-
+    image: "/img/prod/3.png",
+    image2: "/img/prod/3.1.png",
+    category: "Interior Care",
     description:
-      "Refresh your car's interior with a smooth finish and a beautifully maintained dashboard.",
-    slug: "dashboard-polish",
+      "Restore shine to your car's dashboard and interior surfaces with a non-greasy formula that enhances gloss without attracting dust.",
+    slug: "/dashboard-polish",
   },
   {
     id: 4,
-    name: "Tyre Polish",
-    image: "/img/products/tyre-polish.png",
-    image2: "/img/products/wind-screenwash.png",
-
+    name: "Dry Wash Shampoo",
+    image: "/img/prod/4.png",
+    image2: "/img/prod/4.png",
+    category: "Waterless Care",
     description:
-      "Bring back a rich, refreshed appearance to your tyres with Prisana's tyre care formula.",
-    slug: "tyre-polish",
+      "A convenient waterless car cleaning solution that encapsulates light dirt and dust, allowing easy spray-and-wipe cleaning for a shiny finish.",
+    slug: "/dry-wash-shampoo",
   },
-
-
+  {
+    id: 5,
+    name: "De-Mineralise Water",
+    image: "/img/prod/5.png",
+    image2: "/img/prod/5.png",
+    category: "Utility Care",
+    description:
+      "High-quality demineralised water with mineral salts removed, suitable for battery maintenance and topping up compatible coolant and windscreen wash systems.",
+    slug: "/de-mineralise-water",
+  },
+  {
+    id: 6,
+    name: "Tyre Shiner",
+    image: "/img/prod/6.png",
+    image2: "/img/prod/6.1.png",
+    category: "Tyre Care",
+    description:
+      "A specially formulated tyre shiner that cleans, shines, and protects tyres while restoring a rich, deep black finish without attracting dirt and dust.",
+    slug: "/tyre-shiner",
+  },
+  {
+    id: 7,
+    name: "Coolant",
+    image: "/img/prod/7.png",
+    image2: "/img/prod/7.png",
+    category: "Engine Care",
+    description:
+      "An engine coolant formulated to regulate engine temperature, help prevent overheating and freezing, and protect the cooling system against rust and corrosion.",
+    slug: "/coolant",
+  },
 ];
+
 const facilities = [
   {
     id: 1,
@@ -91,7 +121,7 @@ const features = [
     icon: "fa-solid fa-certificate",
     text: "Our manufacturing facility is ISO 9001:2015 and ISO 14001:2015 certified.",
   },
- 
+
   {
     title: "1,20,000 pcs / Day",
     icon: "fa-solid fa-industry",
@@ -100,7 +130,7 @@ const features = [
   {
     title: "International Footprint",
     icon: "fa-solid fa-earth-americas",
-    text: "Products manufactured by our team have reached international markets through Maruti Suzuki India.",
+    text: "prod manufactured by our team have reached international markets through Maruti Suzuki India.",
   },
   {
     title: "18M+ Sachets Delivered",
@@ -255,32 +285,34 @@ const Home = () => {
     <>
 
       {/* hero-section start */}
-      <section
-        className="hero-section" id="hero-section">
+
+      <section className="hero-section" id="hero-section">
         <div className="container-xxl">
           <div className="row">
             <div className="col-lg-7">
               <div className="ccc-content">
 
                 <span className="sub-title">
-                  <i className="fa-solid fa-droplet"></i>
-                  Prisana Screen Wash
+                  <i className="fa-solid fa-car-side"></i>
+                  PRISANA AUTO CARE
                 </span>
 
                 <h1 className="hero-title">
-                  Crystal Clear <br />
-                  <span>Every Drive.</span>
+                  Complete Care <br />
+                  <span>For Every Drive.</span>
                 </h1>
 
                 <p className="hero-desc">
-                  Streak-free cleaning for better visibility,
-                  safer driving and all-weather performance.
+                  Discover Prisana's premium automotive care solutions,
+                  designed to clean, shine and protect your vehicle.
+                  From interior detailing to engine care, we bring
+                  reliable performance to every journey.
                 </p>
 
                 <div className="hero-btns">
 
                   <a href="/products" className="theme-btn">
-                    View Product
+                    Explore Our Products
                     <i className="fa-solid fa-arrow-right"></i>
                   </a>
 
@@ -290,12 +322,13 @@ const Home = () => {
                   </a>
 
                 </div>
-              </div>
 
+              </div>
             </div>
           </div>
         </div>
       </section>
+
       {/* hero-section end */}
 
 
@@ -361,8 +394,8 @@ const Home = () => {
 
               <div className="about-bottom">
 
-                <a href="/contact" className="theme-btn">
-                  Contact Us
+                <a href="/about" className="theme-btn">
+                  Know More
                   <i className="fa-solid fa-arrow-right"></i>
                 </a>
 
@@ -417,17 +450,8 @@ const Home = () => {
           {/* Managing Director */}
           <div className="row align-items-center g-4 mb-5">
 
-            <div className="col-md-4">
-              <div className="leader-image">
-                <img
-                  src="/img/vinod-bhagat.jpg"
-                  alt="Mr. Vinod Bhagat - Managing Director"
-                  className="img-fluid"
-                />
-              </div>
-            </div>
 
-            <div className="col-md-8">
+            <div className="col-md-10 m-auto">
               <div className="leader-content left">
 
                 {/* <span className="leader-label">
@@ -466,7 +490,7 @@ const Home = () => {
           {/* Director */}
           <div className="row align-items-center g-4">
 
-            <div className="col-md-8 order-2 order-lg-1">
+            <div className="col-md-10 m-auto">
               <div className="leader-content right">
 
                 {/* <span className="leader-label">
@@ -501,20 +525,11 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="col-md-4 order-1 order-lg-2">
-              <div className="leader-image">
-                <img
-                  src="/img/rahul-bhagat.jpg"
-                  alt="Mr. Rahul Bhagat - Director"
-                  className="img-fluid"
-                />
-              </div>
-            </div>
 
           </div>
 
         </div>
-      </section>
+      </section >
       {/* Prisana Leadership Section End */}
 
 
@@ -622,18 +637,20 @@ const Home = () => {
                       {/* Buttons */}
                       <div className="prisana-product-actions">
 
-                        <a
-                          href={`/products/${product.slug}`}
+                        <Link
+                          to={`/products/${product.slug}`}
                           className="prisana-view-btn"
                         >
                           View More
                           <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
+                        </Link>
 
                         <a
-                          href={`/contact?product=${encodeURIComponent(
-                            product.name
+                          href={`https://wa.me/919999773525?text=${encodeURIComponent(
+                            `Hello Prisana, I want to enquire about ${product.name}. Please share more details.`
                           )}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="prisana-enquire-btn"
                         >
                           Enquire Now
@@ -1313,7 +1330,7 @@ const Home = () => {
       {/* Manufacturing Process End */}
 
       {/* facility-gallery start */}
-      <FacilityGallery/>
+      <FacilityGallery />
       {/* facility-gallery end */}
 
 
