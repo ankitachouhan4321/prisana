@@ -839,17 +839,20 @@ const Home = () => {
 
           <div className="text-center mb-5">
 
+          
+
             <h2 className="heading-main text-start">
-              Complete Care for
-              <span> Every Part of Your Vehicle</span>
+              Whatever You Drive,
+              <span> Prisana Has You Covered</span>
             </h2>
 
             <p className="text-start">
-              From windshields and dashboards to tyres, exterior surfaces,
-              and engine cooling systems, Prisana offers a wide range of
-              automotive care solutions. Our products help clean, shine,
-              maintain, and protect different parts of your vehicle,
-              making everyday car care easier and more effective.
+              Every part of your vehicle deserves the right care.
+              Prisana offers automotive care solutions for cleaning
+              windshields, maintaining dashboards, polishing tyres,
+              washing exterior surfaces, and supporting engine cooling
+              systems. Explore how our products make vehicle cleaning,
+              maintenance, and protection simple and convenient.
             </p>
 
           </div>
