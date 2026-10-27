@@ -840,16 +840,16 @@ const Home = () => {
           <div className="text-center mb-5">
 
             <h2 className="heading-main text-start">
-              Where to Use
-              <span> Prisana Windshield Screenwash Fluid</span>
+              Complete Care for
+              <span> Every Part of Your Vehicle</span>
             </h2>
 
             <p className="text-start">
-              Keep your windshield clean and your view clear with
-              Prisana Windshield Screenwash Fluid. Designed for
-              vehicles equipped with windshield washer systems,
-              it helps remove everyday dirt, dust, and road grime
-              for better driving visibility.
+              From windshields and dashboards to tyres, exterior surfaces,
+              and engine cooling systems, Prisana offers a wide range of
+              automotive care solutions. Our products help clean, shine,
+              maintain, and protect different parts of your vehicle,
+              making everyday car care easier and more effective.
             </p>
 
           </div>
@@ -942,12 +942,12 @@ const Home = () => {
 
             {/* Before Label */}
             <div className="compare-label before-label">
-              After
+              Before
             </div>
 
             {/* After Label */}
             <div className="compare-label after-label">
-              Before
+              After
             </div>
 
             <div className="compare-image">
