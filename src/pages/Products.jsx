@@ -72,7 +72,7 @@ const products = [
         category: "Engine Care",
         description:
             "An engine coolant formulated to regulate engine temperature, help prevent overheating and freezing, and protect the cooling system against rust and corrosion.",
-        slug: "/products/anti-freeze-coolant",
+        slug: "/products/Coolant",
     },
 ];
 
