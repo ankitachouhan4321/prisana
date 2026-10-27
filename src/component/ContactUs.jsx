@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 
-const CONTACT_EMAIL = "info.viraladsmedia@gmail.com";
+const CONTACT_EMAIL = "info@rexeindia.com";
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
