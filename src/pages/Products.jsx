@@ -12,7 +12,7 @@ const products = [
         category: "Glass Care",
         description:
             "A high-performance concentrated windscreen cleaner that removes dirt, dust, and pollution film for crystal-clear, streak-free visibility.",
-        slug: "/products/wind-screenwash-fluid",
+        slug: "/products/windscreen-wash-fluid",
     },
     {
         id: 2,
@@ -62,7 +62,7 @@ const products = [
         category: "Tyre Care",
         description:
             "A specially formulated tyre shiner that cleans, shines, and protects tyres while restoring a rich, deep black finish without attracting dirt and dust.",
-        slug: "/products/tyre-polish",
+        slug: "/products/tyre-shiner",
     },
     {
         id: 7,
@@ -72,7 +72,7 @@ const products = [
         category: "Engine Care",
         description:
             "An engine coolant formulated to regulate engine temperature, help prevent overheating and freezing, and protect the cooling system against rust and corrosion.",
-        slug: "/products/Coolant",
+        slug: "/products/coolant",
     },
 ];
 
