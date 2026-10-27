@@ -52,7 +52,7 @@ const products = [
         category: "Utility Care",
         description:
             "High-quality demineralised water with mineral salts removed, suitable for battery maintenance and topping up compatible coolant and windscreen wash systems.",
-        slug: "/products/battery-water",
+        slug: "/products/de-mineralise-water",
     },
     {
         id: 6,
