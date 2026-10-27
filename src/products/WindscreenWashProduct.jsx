@@ -198,23 +198,7 @@ const WindscreenWashProduct = () => {
                             </div>
 
 
-                            {/* MARUTI SUZUKI SUPPLY INFORMATION */}
-                            <div className="prisana-product-supply-note">
-
-                                <Info size={19} />
-
-                                <p>
-                                    Currently supplying to{" "}
-                                    <strong>
-                                        MARUTI SUZUKI INDIA LTD
-                                    </strong>{" "}
-                                    under their brand name{" "}
-                                    <strong>
-                                        ECSTAR.
-                                    </strong>
-                                </p>
-
-                            </div>
+                            
 
                         </div>
 

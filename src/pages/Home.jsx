@@ -130,7 +130,7 @@ const features = [
   {
     title: "International Footprint",
     icon: "fa-solid fa-earth-americas",
-    text: "prod manufactured by our team have reached international markets through Maruti Suzuki India.",
+    text: "Our products have reached international markets through Maruti Suzuki India, reflecting our commitment to quality.",
   },
   {
     title: "18M+ Sachets Delivered",
